@@ -1,0 +1,203 @@
+div#sidebar {
+	position: fixed;
+	padding-top: 10px;
+}
+	
+div#sidebar h3 {
+	color: #fff;
+}
+		
+ul li a:not(.active) {
+	background-color: #fff;
+}
+
+div#sidebar ul.nav a > small {
+	color: #333;
+	font-style: italic;
+	font-size: smaller;
+}
+
+div.page h2 {
+  color: #32609e;
+  border-bottom: 1px dotted #32609e;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+div.page h3 {
+  border-bottom: 1px dotted #333;
+}
+
+div.page h3 span.pull-right {
+  font-weight: normal;
+  font-style: italic;
+  font-size: .8em;
+}
+
+div.page {
+  font-size: 1.1em;
+}
+
+div.page p {
+  font-size: 1.1em;
+}
+
+div.page blockquote {
+  margin: 0px 150px 0px 100px;
+}
+
+div.page h1 {
+	counter-reset:section;
+}
+
+div.page h2:not(.numbering_exclude) {
+	counter-reset:subsection;
+}
+
+div.page h2:not(.numbering_exclude):before {
+	counter-increment:section;
+	content:counter(section) ". ";
+}
+
+div.page h3:not(.numbering_exclude):before {
+	counter-increment:subsection;
+	content:counter(section) "." counter(subsection) " ";
+}
+
+p.redacted, ol.redacted  {
+	overflow: hidden;
+	height: 0px;
+}
+
+
+/*p.redacted+:not(.redacted), p.redacted~:not(.redacted) {
+	background: url('../images/ellipsis.jpg') no-repeat center;
+	padding-top: 18px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border-top: 1px dotted #BBB;
+	border-bottom: 1px dotted #BBB;
+	background-color: #EFEFEF;	
+}
+*/
+
+h2.redacted {
+	overflow: hidden;
+	height: 0px;
+	border-bottom: none !important;
+}
+
+li.redacted {
+	opacity: 0.3;
+}
+
+ol~li.redacted, ol~li~ol~li.redacted  {
+	border: 1px solid magenta;
+}
+
+.ribbon-right.redacted {
+	display: none;
+}
+
+
+.ribbon-left {
+    position: absolute;
+    left: -10px;
+	max-width: 80%;
+    padding: 4px 8px;
+    background: #000;
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+.ribbon-left:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 8px;
+    position: absolute;
+    bottom: -65px;
+    left: 0px;
+    background: transparent;
+    z-index: -1;
+    border-top: 45px solid #444444;
+    border-left: 45px solid transparent;
+}
+
+.ribbon-right {
+    position: absolute;
+    right: -10px;
+    padding: 4px 8px;
+    background: #000;
+    color: #fff;
+    -webkit-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    -moz-box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    box-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+	-webkit-transition:all 1.0s ease-in-out;
+	-moz-transition:all 1.0s ease-in-out;
+	-o-transition:all 1.0s ease-in-out;
+	-ms-transition:all 1.0s ease-in-out;	
+	transition:all 1.0s ease-in-out;
+}
+
+
+
+.ribbon-right .ribbon-collapse {
+	display: none;
+}
+
+.ribbon-right:hover .ribbon-collapse {
+	display: inline;
+}
+
+.ribbon-right:after {
+    content: '';
+    display: block;
+    height: 20px;
+    width: 8px;
+    position: absolute;
+    top: 26px;
+    right: 0px;
+    background: transparent;
+    z-index: -1;
+    border-top: 45px solid #696969;
+    border-right: 45px solid transparent;
+}
+
+.ribbon-important {
+  background: darkred;
+}
+
+.ribbon-important:after {
+  border-top: 45px solid #bb6969;
+}
+
+.ribbon-success {
+  background: green;
+}
+
+.ribbon-success:after {
+  border-top: 45px solid #69bb69;
+}
+
+.ribbon-info {
+  background: #49AFCD;
+}
+
+.ribbon-info:after {
+  border-top: 45px solid #1F6377;
+}
+
+div.page ol li {
+	margin-top: 5px;
+}
+
+div.page ol ol {
+	list-style-type: lower-alpha;
+}
+
+div.page ol ol ol {
+	list-style-type: lower-roman;
+}
+

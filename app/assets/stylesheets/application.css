@@ -12,25 +12,44 @@
  *= require_tree .
 */
 
-body {
-	background: url('../images/grey-linen.png');
+div.page p {
+	text-align: justify;
 }
 
-div.center {
-    margin:0px auto !important;
-	float: none !important;
+@media (min-width: 768px) {
+	body {
+		background: url('../images/grey-linen.png');
+		background-position: fixed;
+		background-attachment: fixed;
+	}
+	
+	div.center {
+	    margin:0px auto !important;
+		float: none !important;
+	}
+
+	div.page {
+	  position: relative;
+	  margin-top: 25px;
+	  padding: 20px;
+	  background-color: white;
+	  border: 1px solid #dddddd;
+	}
+
+	div.page-shadow {
+	  background: url('../images/leaftshadow-900.png') no-repeat bottom;
+	  padding-bottom: 20px;
+	  padding-top: 10px;
+  
+	}
+
 }
 
-div.page {
-  position: relative;
-  margin-top: 25px;
-  padding: 20px;
-  background-color: white;
-  border: 1px solid #dddddd;
-}
+@media (max-width: 768px) {
+	div.page, div.page-shadow {	    
+		margin: 0px !important;
+		padding: 0px !important;
+		float: none !important;
+	}
 
-div.page-shadow {
-  background: url('../images/leaftshadow.png') no-repeat bottom;
-  padding-bottom: 20px;
 }
-

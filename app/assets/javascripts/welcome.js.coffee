@@ -3,4 +3,4 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 
 jQuery ->
-  $('div.page').wrap('<div class="page-shadow">')
+  $('div.page').wrap('<div class="page-shadow span9 offset3">')
