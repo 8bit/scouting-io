@@ -1,5 +1,40 @@
+@page {
+  size: 7in 9.25in;
+  margin: 27mm 16mm 27mm 16mm;
+  
+  @top-left {
+    content: "CCRO";
+  }
+  
+}
 
-@media (max-width: 768px) {
+@page :left {
+  @top-left {
+    content: "CCRO";
+  }
+}
+
+h2 {
+  string-set: header content();
+}
+
+@page :right {
+  @top-right {
+    content: string(header, first); 
+  }
+}
+
+@page :left {
+  @bottom-left {
+    content: counter(page);
+  }
+}
+
+ol.toc a::after {
+  content: leader('.') target-counter(attr(href), page);
+}
+
+@media (max-width: 768px), print {
 	div.page, div.page-shadow {	    
 		margin: 0px !important;
 		padding: 0px !important;
@@ -10,6 +45,24 @@
 		width: 352px;
 	}
 }
+
+@media screen {
+	.print-footer {
+		display: none;
+	}
+}
+
+@media print {
+	h2 {
+		page-break-before:always;
+	}
+	
+	.print-footer {
+		position: fixed;
+		bottom: 0;
+	}
+}
+
 @media (min-width: 768px) and (max-width: 979px) {
 	div.page-shadow {	    
 		margin-left: 0px !important;
@@ -47,7 +100,7 @@
 	}
 }
 
-@media (max-width: 979px) {
+@media (max-width: 979px), print {
 	div#sidebar {
 		display: none;
 	}
