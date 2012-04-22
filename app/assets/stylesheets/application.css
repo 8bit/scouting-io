@@ -9,7 +9,6 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require_tree .
 */
 
 div.page p {
@@ -37,7 +36,7 @@ div.page p {
 	}
 
 	div.page-shadow {
-	  background: url('../images/leaftshadow-900.png') no-repeat bottom;
+	  background: url('../images/leaftshadow.png') no-repeat bottom;
 	  padding-bottom: 20px;
 	  padding-top: 10px;
   
